@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Flask App</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Bio</h2>
+        <form method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+            </div>
+            <div>
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio"></textarea><br>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="bio-list">
+            {% for bio in bios %}
+            <div class="bio">
+                <h3>{{ bio.name }}</h3>
+                <p>{{ bio.bio }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
