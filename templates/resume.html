@@ -4,30 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Flask App</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
 </head>
 <body>
     <div class="container">
-        <h2>Resume</h2>
-        <form method="POST">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br>
+        <div class="left-col">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1><NAME></h1>
+                <h3>Software Engineer</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/example/">LinkedIn</a></li>
+                    <li><a href="https://github.com/example/">GitHub</a></li>
+                    <li><a href="mailto:<EMAIL>">Email</a></li>
+                </ul>
             </div>
-            <div>
-                <label for="resume">Resume:</label>
-                <textarea id="resume" name="resume"></textarea><br>
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>I am a software engineer with over 10 years of experience in the industry. I have a passion for building high-quality software that is easy to use and maintain. I am always looking for new challenges and opportunities to learn and grow as a professional.</p>
             </div>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="resume-list">
-            {% for resume in resumes %}
-            <div class="resume">
-                <h3>{{ resume.name }}</h3>
-                <p>{{ resume.resume }}</p>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>SQL</li>
+                    <li>NoSQL</li>
+                    <li>Git</li>
+                    <li>Agile Methodologies</li>
+                </ul>
             </div>
-            {% endfor %}
+        </div>
+        <div class="right-col">
+            <div class="experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <h3>Software Engineer</h3>
+                    <h4>Company Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <h5>May 2010 - Present</h5>
+                </div>
+                <div class="job">
+                    <h3>Software Developer</h3>
+                    <h4>Company Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <h5>May 2005 - April 2010</h5>
+                </div>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <div class="school">
+                    <h3>University Name</h3>
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <h5>August 2000 - May 2005</h5>
+                </div>
+            </div>
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
